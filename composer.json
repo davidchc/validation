@@ -1,0 +1,14 @@
+{
+    "name": "david/validacao",
+    "authors": [
+        {
+            "name": "David CHC",
+            "email": "david.chc@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Validation\\" : "src/Validation/" 
+        }
+    }
+}
