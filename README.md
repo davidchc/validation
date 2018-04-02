@@ -23,5 +23,35 @@ Dentro da pasta Rules, é definido as regras para validação. Cada regra é def
 
 A classe Validate recebe um valor, e recebe as regras que irão validar esse valor.
 
+#Example
+
+```php
+<?php 
+
+require __DIR__.'/vendor/autoload.php';
+
+use Validation\Validate;
+use Validation\Rules\Required;
+use Validation\Rules\Email;
+
+
+$value = 'valor';
+$validate = new Validate($value);
+$validate->add(Required::class)
+         ->add(Email::class);
+    
+if(!$validate->execute()) {
+     echo $validate->getError();
+} else {
+     echo 'Passou';
+}
+
+
+
+
+
+
+
+
 
 
